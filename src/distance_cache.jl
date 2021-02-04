@@ -1,4 +1,4 @@
-struct ClearDistances
+mutable struct ClearDistances
     cardinal::SVector{4, Int}
     diagonal::SVector{4, Int}
 end

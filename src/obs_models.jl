@@ -1,4 +1,4 @@
-struct LTObsDist{M<:ObsModel}
+mutable struct LTObsDist{M<:ObsModel}
     same::Bool
     distances::ClearDistances
     model::M
@@ -9,7 +9,7 @@ end
 
 LTObsDist(dists::ClearDistances, model::M) where {M<:ObsModel} = LTObsDist{M}(dists, model)
 
-struct DESPOTEmu <: ObsModel
+mutable struct DESPOTEmu <: ObsModel
     std::Float64
     cdf::ReadingCDF
 end
